@@ -28,7 +28,6 @@ async function getWeather(thisCity, unit) {
     const myMax = JSON.stringify(data.main.temp_max);
     const myMin = JSON.stringify(data.main.temp_min);
     const myFeel = JSON.stringify(data.main.feels_like);
-    console.log(data);
     table.style.cssText = 'animation: myTable 3s;';
     date.innerHTML = todays;
     city.innerHTML = `${data.name},<span class="state">${data.sys.country}</span>`;
