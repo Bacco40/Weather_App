@@ -22,7 +22,7 @@ const todays = format(new Date(), 'ccc d MMMM u');
 
 async function getWeather(thisCity, unit) {
   try {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${thisCity}&units=${unit}&id=524901&appid=05f9c97d45dde7245eefc5ed36fdeaa6`, { mode: 'cors' });
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${thisCity}&units=${unit}&id=524901&appid=05f9c97d45dde7245eefc5ed36fdeaa6`, { mode: 'cors' });
     const data = await response.json();
     const myTemp = JSON.stringify(data.main.temp);
     const myMax = JSON.stringify(data.main.temp_max);
@@ -32,7 +32,7 @@ async function getWeather(thisCity, unit) {
     date.innerHTML = todays;
     city.innerHTML = `${data.name},<span class="state">${data.sys.country}</span>`;
     description.innerHTML = data.weather[0].description;
-    icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">`;
+    icon.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">`;
     temperature.innerHTML = `${myTemp.slice(0, -1)}°`;
     max.innerHTML = `Max:${myMax.slice(0, -1)}°`;
     min.innerHTML = `Min:${myMin.slice(0, -1)}°`;
