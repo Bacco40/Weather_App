@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/25ee9e54cc.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="title"><i class="fas fa-cloud-sun"></i>WeatherApp</div>
+        <div class="search">
+            <div class="tag">C</div>
+            <label class="switch">
+                <input type="checkbox" class="celsius" value="metric" autocomplete="off">
+                <span class="slider"></span>
+            </label>
+            <div class="tag">F</div>
+            <label for="cityName">
+                <input type="text" class="cityName" id="cityName" value="" autocomplete="off" placeholder="Search city">
+                <div class="error" aria-live="polite"></div>
+            </label>
+            <button class="src"><i class="fas fa-search"></i></button>  
+        </div>
+    </div>
+    <div class="content">
+        <div class="table">
+            <div class="info">
+                <div class="right_data">
+                    <div class="city"></div>
+                    <div class="date"></div>
+                </div>
+                <div class="left_data">
+                    <div class="icon"></div>
+                    <div class="description"></div>
+                </div>
+            </div>
+            <div class="tempInfo">
+                <div class="degree">
+                    <div class="temperature"></div>
+                    <div class="tempDetail">
+                        <div class="max"></div>
+                        <div class="min"></div>
+                    </div>
+                </div>
+                <div class="extraInfo">
+                    <div class="feels"></div>
+                    <div class="humidity"></div>
+                    <div class="pressure"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"><a href="https://github.com/Bacco40" target="_blank"><i class="fab fa-github"></i></a> Copyright © Matteo Bacchetti - The Odin Project 2022 </div>
+</body>
+</html>
